@@ -36,5 +36,14 @@ class ViewController: UIViewController {
 
 
 extension ViewController {
-    
+    func getAppConfig() {
+        do {
+            let apiKey = try Config.value(for: "API_KEY") as String
+            print("Current environment via XCConfig:", apiKey)
+        } catch let error as ConfigError {
+            print(error)
+        } catch {
+            print(error)
+        }
+    }
 }
