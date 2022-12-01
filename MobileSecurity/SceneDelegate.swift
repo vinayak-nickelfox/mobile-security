@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  MobileSecurity
 //
-//  Created by Vinayak Paul on 21/11/22.
+//  Created by Vinayak Paul on 19/11/22.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    weak var screen : UIView? = nil
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -29,11 +29,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        self.removeBlurScreen()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
+        self.addBlurScreen()
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -46,7 +48,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
+    
 }
 
+extension SceneDelegate {
+    func addBlurScreen() {
+        self.screen = UIScreen.main.snapshotView(afterScreenUpdates: false)
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurBackground = UIVisualEffectView(effect: blurEffect)
+        self.screen?.addSubview(blurBackground)
+        if let screen = self.screen {
+            blurBackground.frame = screen.frame
+            window?.addSubview(screen)
+        }
+    }
+
+    func removeBlurScreen() {
+        self.screen?.removeFromSuperview()
+    }
+}

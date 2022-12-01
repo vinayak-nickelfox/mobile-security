@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5803BC7292C0BAB009BFFDF /* prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F5803BC6292C0BAB009BFFDF /* prod.xcconfig */; };
+		F5803BC9292C0D25009BFFDF /* dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F5803BC8292C0D25009BFFDF /* dev.xcconfig */; };
+		F5803BCD292D275B009BFFDF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5803BCC292D275B009BFFDF /* Config.swift */; };
+		F5803BCF292D2DFE009BFFDF /* ConventionalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5803BCE292D2DFE009BFFDF /* ConventionalConfig.swift */; };
+		F5803BD1292D4F1C009BFFDF /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5803BD0292D4F1C009BFFDF /* Logging.swift */; };
 		F5F3DE6B292BDE44002BA438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DE6A292BDE44002BA438 /* AppDelegate.swift */; };
 		F5F3DE6D292BDE44002BA438 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DE6C292BDE44002BA438 /* SceneDelegate.swift */; };
 		F5F3DE6F292BDE44002BA438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DE6E292BDE44002BA438 /* ViewController.swift */; };
 		F5F3DE72292BDE44002BA438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F3DE70292BDE44002BA438 /* Main.storyboard */; };
 		F5F3DE74292BDE45002BA438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F3DE73292BDE45002BA438 /* Assets.xcassets */; };
 		F5F3DE77292BDE45002BA438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F3DE75292BDE45002BA438 /* LaunchScreen.storyboard */; };
+		F5F3DE7F292BDE5D002BA438 /* JailBreakManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DE7E292BDE5D002BA438 /* JailBreakManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5803BC6292C0BAB009BFFDF /* prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = prod.xcconfig; sourceTree = "<group>"; };
+		F5803BC8292C0D25009BFFDF /* dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = dev.xcconfig; sourceTree = "<group>"; };
+		F5803BCC292D275B009BFFDF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F5803BCE292D2DFE009BFFDF /* ConventionalConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConventionalConfig.swift; sourceTree = "<group>"; };
+		F5803BD0292D4F1C009BFFDF /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		F5F3DE67292BDE44002BA438 /* MobileSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F3DE6A292BDE44002BA438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F3DE6C292BDE44002BA438 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,7 @@
 		F5F3DE73292BDE45002BA438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F3DE76292BDE45002BA438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5F3DE78292BDE45002BA438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F3DE7E292BDE5D002BA438 /* JailBreakManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailBreakManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5803BCA292D2705009BFFDF /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F5803BC6292C0BAB009BFFDF /* prod.xcconfig */,
+				F5803BC8292C0D25009BFFDF /* dev.xcconfig */,
+				F5803BCC292D275B009BFFDF /* Config.swift */,
+				F5803BCE292D2DFE009BFFDF /* ConventionalConfig.swift */,
+			);
+			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		F5803BCB292D2716009BFFDF /* JailBreak */ = {
+			isa = PBXGroup;
+			children = (
+				F5F3DE7E292BDE5D002BA438 /* JailBreakManager.swift */,
+			);
+			path = JailBreak;
+			sourceTree = "<group>";
+		};
+		F5803BD2292D4F26009BFFDF /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				F5803BD0292D4F1C009BFFDF /* Logging.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		F5F3DE5E292BDE44002BA438 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +98,9 @@
 				F5F3DE6A292BDE44002BA438 /* AppDelegate.swift */,
 				F5F3DE6C292BDE44002BA438 /* SceneDelegate.swift */,
 				F5F3DE6E292BDE44002BA438 /* ViewController.swift */,
+				F5803BD2292D4F26009BFFDF /* Logging */,
+				F5803BCB292D2716009BFFDF /* JailBreak */,
+				F5803BCA292D2705009BFFDF /* XCConfig */,
 				F5F3DE70292BDE44002BA438 /* Main.storyboard */,
 				F5F3DE73292BDE45002BA438 /* Assets.xcassets */,
 				F5F3DE75292BDE45002BA438 /* LaunchScreen.storyboard */,
@@ -126,7 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5F3DE77292BDE45002BA438 /* LaunchScreen.storyboard in Resources */,
+				F5803BC7292C0BAB009BFFDF /* prod.xcconfig in Resources */,
 				F5F3DE74292BDE45002BA438 /* Assets.xcassets in Resources */,
+				F5803BC9292C0D25009BFFDF /* dev.xcconfig in Resources */,
 				F5F3DE72292BDE44002BA438 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5F3DE6F292BDE44002BA438 /* ViewController.swift in Sources */,
+				F5803BCF292D2DFE009BFFDF /* ConventionalConfig.swift in Sources */,
+				F5F3DE7F292BDE5D002BA438 /* JailBreakManager.swift in Sources */,
+				F5803BD1292D4F1C009BFFDF /* Logging.swift in Sources */,
+				F5803BCD292D275B009BFFDF /* Config.swift in Sources */,
 				F5F3DE6B292BDE44002BA438 /* AppDelegate.swift in Sources */,
 				F5F3DE6D292BDE44002BA438 /* SceneDelegate.swift in Sources */,
 			);
@@ -168,6 +216,7 @@
 /* Begin XCBuildConfiguration section */
 		F5F3DE79292BDE45002BA438 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5803BC8292C0D25009BFFDF /* dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -202,6 +251,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -228,6 +278,7 @@
 		};
 		F5F3DE7A292BDE45002BA438 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5803BC6292C0BAB009BFFDF /* prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -262,6 +313,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

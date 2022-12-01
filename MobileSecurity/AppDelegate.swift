@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MobileSecurity
 //
-//  Created by Vinayak Paul on 21/11/22.
+//  Created by Vinayak Paul on 19/11/22.
 //
 
 import UIKit
@@ -33,4 +33,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
